@@ -1,0 +1,111 @@
+<!-- Made by Lemuel >:D -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Video </title>
+
+
+    <link href="../../css/Nav2.css" rel="stylesheet">
+    <link href="../../css/video.css" rel="stylesheet">
+    <link href="../../css/dropdownprofile.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/popup.css">
+
+    <link rel="icon" href="../../images/logo.png">
+    <script src="../../js/loadingscreen.js"></script>
+
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="ifloggedin()">
+    <!-- Loading screen -->
+
+    <div id="overlay">
+        <div id="spinner"></div>
+    </div>
+    <div id="cinema"></div>
+
+    <div class="container-fluid">
+
+        <div id="container" class="row justify-content-around">
+
+            <div id="video" class="col-lg-8 col-sm-12">
+                <h2 id="reminder" class="text-center">Click on a picture to watch a video playlist.</h2>
+
+                <h1 id="stuff" class="text-center text-capitalize">Environmental Videos</h1>
+
+                <iframe id="mainvid" class="embed-responsive embed-responsive-16by9" src="" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen> </iframe>
+
+                <button id="cinemabtn" class="btn btn-success btn-block" onclick="offcinema()">Enter Cinema Mode</button>
+            </div>
+
+
+
+            <div id="recommend" class="col-lg-3 col-md-10">
+                <div id="playlisthead" class="col">
+                    <h2 class="text-center text-capitalize">Playlists</h2>
+                </div>
+
+                <div id="playlists2" class="col">
+                    <a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q">
+                        <h4 class="text-center"> Kurzgesagt </h4>
+                    </a>
+
+                    <img id="Kurzgesagtvid" src="http://i3.ytimg.com/vi/RS7IzU2VJIQ/maxresdefault.jpg" class="embed-responsive embed-responsive-16by9"
+                        onclick="changeplaylist(0)">
+
+                    <a href="https://www.youtube.com/channel/UCeiYXex_fwgYDonaTcSIk6w">
+                        <h4 class="text-center"> MinuteEarth</h4>
+                    </a>
+                    <img id="MinuteEarthvid" src="http://i3.ytimg.com/vi/TRb52O76HxQ/maxresdefault.jpg" class="embed-responsive embed-responsive-16by9"
+                        onclick="changeplaylist(1)">
+
+                    <a href="https://www.youtube.com/channel/UCC552Sd-3nyi_tk2BudLUzA">
+                        <h4 class="text-center"> AsapScience</h4>
+                    </a>
+                    <img id="MinuteEarthvid" src="https://img.youtube.com/vi/b6CPsGanO_U/maxresdefault.jpg" class="embed-responsive embed-responsive-16by9"
+                        onclick="changeplaylist(4)">
+
+                    <a href="https://www.youtube.com/channel/UCsooa4yRKGN_zEE8iknghZA">
+                        <h4 class="text-center"> TED-Ed </h4>
+                    </a>
+                    <img id="Kurzgesagtvid" src="https://img.youtube.com/vi/RnvCbquYeIM/maxresdefault.jpg" class="embed-responsive embed-responsive-16by9"
+                        onclick="changeplaylist(2)">
+
+                    <a href="https://www.youtube.com/channel/UCAuUUnT6oDeKwE6v1NGQxug">
+                        <h4 class="text-center"> TEDx Talks </h4>
+                    </a>
+                    <img id="Kurzgesagtvid" src="http://i3.ytimg.com/vi/7Lc_dlVrg5M/maxresdefault.jpg" class="embed-responsive embed-responsive-16by9"
+                        onclick="changeplaylist(3)">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid row justify-content-center">
+    </div>
+    <script src="../../js/video.js"></script>
+    <script src="../../js/essentials.js"></script>
+    <script src="../../js/login2.js"></script>
+    <script src="../../js/titles.js"></script>
+</body>
+
+</html>

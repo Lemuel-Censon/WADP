@@ -1,0 +1,139 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+body {
+	background-color: rgb(218, 218, 218);
+	background-image: url("../images/Backgrounds/Greenwhite2.png");
+	background-attachment: fixed;
+}	
+
+/* Slideshow */
+
+#map{
+	margin-top:12vh;
+	/* width: 98.5%; */
+
+	background-color:rgb(255, 255, 255);
+
+	border:1px 0px solid lightgray;
+	box-shadow: 0px 0px 5px gray;
+	
+	overflow: hidden;
+}
+
+.map{
+	width: 70%;
+	display: block;
+	margin: auto;
+}
+
+#left, #right{
+	font-size: 35px;
+	font-weight: bolder;
+	color: lime;
+}
+
+/* Test */
+
+#test{
+    width: 98.5%;
+	position: relative;
+	margin: 5vh auto;
+	border:1px solid lightgray;
+	box-shadow: 0px 0px 5px gray;
+	border-radius: 1%;
+	overflow: hidden;
+}
+
+
+/* FAQ */
+
+#faq {
+	min-height: 60vh;		
+	background-color: rgb(255, 255, 255);
+	border:1px solid lightgray;
+	padding:20px;
+}
+
+
+#faq h1{
+	text-align: center;
+}
+
+
+#faq button{
+	min-height: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    #faq button{
+		font-size: 14px;
+	}
+}
+
+
+
+/* Trivia*/
+
+.trivia{
+	min-height: 80vh;
+	background-color: rgb(255, 255, 255);
+	border:1px solid lightgray;
+	/* background-color: #000; */
+
+}
+	
+.trivia h1{
+	margin-top: 20px;
+	text-align: center;
+	color: green;
+	font-size: 40px;
+}
+
+.trivia p{
+	text-align:center;
+	font-size: 20px;
+	font-weight: bold;
+	transition: all .5s ease;
+}
+
+/* Earth Day*/
+
+#earthday{
+	width: 98.5%;
+	min-height: 50vh;
+	border: 2px solid lightgray;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	
+	border-radius: 10px;
+	margin:2vh auto;
+	padding-top:20px;
+
+	background-color: rgb(255, 255, 255);
+	overflow: hidden;
+
+}
+#earthday iframe{
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+	min-width: 80%;
+	
+	
+}
+#earthday > h1, #earthday p, #earthday a{
+	text-align: center;
+
+
+}
+
+
+#earthday p{
+	font-size: 16px;
+}
+
+#earthday h1{
+	font-size: 6vh;
+}
+
+
+

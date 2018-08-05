@@ -1,0 +1,120 @@
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#edaypic{
+	margin: auto;
+	margin-top: 12vh;
+	background-color: black;
+	width: 98.5%;
+	border: 1px solid gray;
+	box-shadow: 0px 0px 5px black;
+
+}
+
+#edaypics img {
+	vertical-align: middle; 
+	width: 1000px;
+	height: 600px;
+}
+
+canvas {
+	border: 1px solid #d3d3d3;
+	background-color: #f1f1f1;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Verdana;
+	
+	
+}
+
+p.close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: lightgray;
+	font-size: 30px;
+}
+
+p.close:hover{
+	cursor: pointer;
+}
+
+#bgcolor{
+	background-color: white;
+}
+
+#prompt{
+	font-family: Verdana, sans-serif;
+	border: 1px solid black;
+	text-align: center;
+	color: black;
+	text-shadow: black;
+	margin: 10px;
+	width: 100%;	
+	padding: 10px;
+}
+
+span.number{
+	font-weight: bold;
+	font-style: italic;
+	color: red;
+}
+
+#play{
+    background-color: rgb(52, 119, 4);
+    border: none;
+	margin-bottom: 50px;
+}
+
+div button{
+	display: block;
+}
+
+#myDIV,  #myDIV2, #myDIV3, #myDIV4, #myDIV5, #myDIV6, #myDIV7, #myDIV8, #myDIV9, #myDIV10{
+    width: 1050px;
+	padding: 10px 0;
+	font-family: Verdana, sans-serif;
+	text-align: center;
+    margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid black;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: none;
+}
+
+textarea {
+	width: 700px;
+	margin-left: 40px;
+}
+
+#buttons {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid black;
+	font-family: Verdana, sans-serif;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+input[type=text] {
+	cursor: pointer;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+
+#textbox {
+	margin-left: 50px;
+	width: 800px;
+}
+
+

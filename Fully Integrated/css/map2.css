@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* 
+body{
+    overflow-y: hidden;
+} */
+
+#map{
+    height: 90vh;
+    float: right;
+    box-sizing: border-box;
+    border-top:3px solid rgb(0, 201, 0);
+    overflow: hidden;
+}
+
+#container{
+    width: 100%;
+    min-height: 90vh;
+    margin-top:10vh;
+    box-sizing: border-box;
+    
+
+    overflow: hidden;
+}
+/* Scroll */
+
+#scroll{
+    margin-top:10px;
+    float: left;
+    max-height: 90vh;
+    background-color: white;
+    text-align: center;
+}
+

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Earth Day</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/Earth Day.css">
+
+	
+	<link rel="stylesheet" href="../css/Nav2.css">
+	<link rel="stylesheet" href="../css/dropdownprofile.css">
+	<link rel="stylesheet" href="../css/loading.css">
+	<script src="../js/loadingscreen.js"></script>
+
+	<!-- Bootstrap-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+	 crossorigin="anonymous"></script>
+</head>
+
+<body onload="ifloggedin()">
+
+	<div id="overlay">
+		<div id="spinner"></div>
+	</div>
+
+
+	<!-- Container is fluid so it takes the whole width of screen-->
+	<div id="edaypic" class="container-fluid row justify-content-center">
+		<div id="edaypics" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#edaypics" data-slide-to="0" class="active"></li>
+				<li data-target="#edaypics" data-slide-to="1"></li>
+				<li data-target="#edaypics" data-slide-to="2"></li>
+				<li data-target="#edaypics" data-slide-to="3"></li>
+				<li data-target="#edaypics" data-slide-to="4"></li>
+				<li data-target="#edaypics" data-slide-to="5"></li>
+			</ul>
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://onehdwallpaper.com/wp-content/uploads/2016/04/Earth-Day-Wallpaper-Latest-in-High-Resolution.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/338px-The_Earth_seen_from_Apollo_17.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="https://cdn.shopify.com/s/files/1/1798/2901/products/berry_beautiful_3_compact.jpg?v=1523915407">
+				</div>
+				<div class="carousel-item">
+					<img src="http://r.ddmcdn.com/s_f/o_1/cx_692/cy_253/cw_1472/ch_1472/w_720/APL/uploads/2014/12/aplive-african-watering-hole-cam.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="https://c402277.ssl.cf1.rackcdn.com/photos/2330/images/hero_full/polar-bear-hero.jpg?1345901694">
+				</div>
+				<div class="carousel-item">
+					<img src="https://rukminim1.flixcart.com/image/832/832/plant-seed/f/3/k/e-garden-10-venus-fly-trap-carnivorous-plant-original-imaek9gutze5sk9g.jpeg?q=70">
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#edaypics" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#edaypics" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	</div>
+
+
+	<p id="edcaption">Earth Day comes only once a year, and what better way to celebrate and honor the beautiful Earth we live on by learning
+		more about it? Here are 30 fun and interesting facts about the earth that will entertain and make you appreciate the vastness
+		of Mother Earth and what our planet has to offer.
+		<br>Click
+		<span id="triviadisplay" class="btn btn-success" onclick="displayTrivia()">HERE</span> to know more about our Earth!</p>
+
+
+	<div id="trivia">
+		<ol>
+			<li>When you are standing, you are actually moving through space at
+				<span class="number">1,000</span> miles per hour.</span>
+			</li>
+			<li>The Earth moves around the sun at
+				<span class="number">67,000</span> miles per hour.</li>
+			<li>The Earth is approximately
+				<span class="number">4.53 billion</span> years old.</li>
+			<li>The Earth and its rocks recycle themselves by transforming from magma to rock to sedimentary rock to metamorphic rock
+				to magma again.</li>
+			<li>Like the Earth experiences earthquakes, the moon experiences “moonquakes”.</li>
+			<li>The largest earthquake in recorded U.S. history was the magnitude
+				<span class="number">9.2</span> earthquake in Prince William Sound, Alaska in 2011.</li>
+			<li>The hottest reported spot on the Earth is in El Azizia, Libya, where NASA recorded a temperature of
+				<span class="number">136</span> degrees Fahrenheit.</li>
+			<li>The coldest reported spot on the Earth is in Antarctica, where temperatures reach as low as minus
+				<span class="number">100</span> degrees Fahrenheit.</li>
+			<li>The lowest temperature ever recorded was in Russia’s Vostok Station, where temperatures reached minus
+				<span class="number">128.6</span> degrees Fahrenheit.</li>
+			<li>The Antarctic ice gap contains
+				<span class="number">70 percent</span> of the Earth’s fresh water and
+				<span class="number">90 percent</span> of its ice.</li>
+			<li>Over the past
+				<span class="number">20 million</span> years, the Earth experiences pole reversal ever
+				<span class="number">200,000</span> to
+				<span class="number">300,000</span> years, although the last one hasn’t occurred in over twice this time.</li>
+			<li>The world’s longest mountain range is under water. It is called the mid-ocean ridge and stretches
+				<span class="number">40,389</span> miles.</li>
+			<li>The deepest point on the ocean floor is
+				<span class="number">35,813</span> feet in the Mariana Trench.</li>
+			<li>The deepest point not covered by the ocean is
+				<span class="number">8,382</span> feet at the Bentley Subglacial Trench in Antarctica.</li>
+			<li>There are three deadly lakes: the Nyos, Monoun and Kivu.</li>
+			<li>The Earth may once have not been blue, but purple.</li>
+			<li>A single lightning strike can heat the air to some
+				<span class="number">54,000</span> degrees Fahrenheit.</li>
+			<li>Humans have only explored
+				<span class="number">5 percent</span> of the Earth’s oceans, which cover some
+				<span class="number">70 percent</span> of the Earth’s surface.</li>
+			<li>Seas hold more than
+				<span class="number">20 million tons</span> of gold.</li>
+			<li>The Earth is some
+				<span class="number">93</span> million miles from the sun.</li>
+			<li>The Earth is not a perfect sphere. As the Earth spins, gravity points toward the center of our planet, and a centrifugal
+				force pushes outward.</li>
+			<li>At the equator, the circumference of the globe is
+				<span class="number">24,901</span> miles long.</li>
+			<li>The largest confirmed stalagmite in the world can be found in Cuba in the Cuevo San Martin Infierno, which rises
+				<span class="number">220</span> feet tall.</li>
+			<li>The Earth's magnetic field, which protects the planet from huge blasts of deadly solar radiation, has been weakening over
+				the past six months, according to data collected by a European Space Agency (ESA) satellite array called Swarm.</li>
+			<li>Earth may once have had two moons. A teensy second moon — spanning about
+				<span class="number">750</span> miles wide — may have orbited the Earth before it catastrophically slammed into the other one.</li>
+			<li>At the Death Valley, a perfect storm can move rocks sometimes weighing tens or hundreds of pounds.</li>
+			<li>Coral reefs support the most species per unit area of any of the planet's ecosystems, rivaling rain forests. And while
+				they are made up of tiny coral polyps, together coral reefs are the largest living structures on the Earth — a community
+				of connected organisms — with some visible even from space.</li>
+			<li>The lowest point on land is the Dead Sea between Jordan, Israel and the West Bank. The surface of this super-salty lake
+				is
+				<span class="number">1,388</span> feet below sea level.
+				<li>On a daily basis, about
+					<span class="number">100 tons</span> of interplanetary material (mostly in the form of dust) drifts down to the Earth's surface. The tiniest
+					particles are released by comets as their ices vaporize near the sun.</li>
+				<li>The largest volcanic eruption recorded by humans occurred in April 1815, the peak of the explosion of Mount Tambora.
+					The eruption ranked
+					<span class="number">7</span> (or "super-colossal") on the Volcanic Explosivity Index (VEI), which goes from 1 to 8 and is somewhat akin
+					to the magnitude scale for earthquakes.</li>
+		</ol>
+	</div>
+
+	
+	</div>
+	<script src="../js/Earth Day.js"></script>
+	<script src="../js/essentials.js"></script>
+	<script src="../js/login2.js"></script>
+</body>
+
+</html>

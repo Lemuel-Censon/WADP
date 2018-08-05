@@ -1,0 +1,56 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Verdana;
+
+}
+
+/* Navigation Bar */
+
+#navbar{
+    min-height: 10vh;
+    background-color: red;
+}
+
+
+.nav-link{
+    font-size:1.2em;
+}
+
+.nav-link, .navbar-brand{
+    margin: 0px 20px;
+}
+
+/* For log in button */
+
+#loginbutton{
+    margin-right:20px;
+    font-size: 1.2em;
+    color:green;
+
+}
+
+#loginbutton:hover{
+    cursor: pointer;
+    color:rgb(255, 255, 255);
+}
+
+.invalid{
+    color:red;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    display: none;
+}
+
+/* When logged in */
+
+#loggedinusername{
+    color: green;
+    font-size: 25px;
+    margin-right:20px;
+}
+
+#loggedinusername:hover{
+    cursor: pointer;
+}

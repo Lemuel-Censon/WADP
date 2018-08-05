@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Welcome to GoGreenFriendly Website/Study_Planner</title>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="StudyPlanWADP.css">-->
+<link rel="stylesheet" type="text/css" href="../css/StudyPlan.css">
+
+<style>
+#keys{
+    margin-bottom:18px;
+	margin-left:38px;
+	border:2px solid black
+}
+#phrases{
+    font-weight:bold;
+	font-size:25px;
+	text-shadow:1px 1px 4px #0000ff;
+}
+#phrases, h4{
+    margin-left:8px;
+}
+#allmths:hover, #current:hover{
+    background-color:#00e600;
+	text-decoration:none;
+}
+#allmths > a:hover, #current > a:hover{
+    color:black;
+	text-decoration:none;
+}
+#displayInstruct{
+    margin-top:16px;
+}
+</style>
+</head>
+<body>
+
+<button id="displayInstruct" type="button" class="btn btn-info" data-toggle="collapse" data-target="#instruction" style="margin-left:39px">Click to display or hide the Instructions</button><br><br>
+<div id="instruction" class="collapse">
+<table id="allInstructions" class="table table-striped"> 
+<tr>
+<th id="instructions">Instructions on how to use the calendar</th>
+</tr>
+<tr>
+<th><li style="float:left">First, you CHOOSE any of the days on the calendar</li></th>
+</tr>
+<tr>
+<th><li style="float:left">Click on the particular day you want to set your to-do-lists on</li></th>
+</tr>
+<tr>
+<th><li style="float:left">You will enter into a page with all the time slots from 12am - 11pm of the day you selected</li></th>
+</tr>
+<tr>
+<th><li style="float:left">Set your plans on that particular time slot and click on the <button class="btn btn-success">Confirm</button> to save what you have input</li></th>
+</tr>
+<tr>
+<th><li style="float:left">Click on the <button class="btn btn-danger">Cancel</button> to go back to this page (But BEWARE! Once you click cancel every data that you have input will be gone</li></th>
+</tr>
+</table>
+</div>
+<br>
+
+<div align="center" class="container" style="border: 2px solid black">
+<h3>Legend:</h3>
+    <div id="Hol" class="p-3 mb-2 bg-info text-dark" data-toggle="tooltip" title="School Holidays">
+       <div id="holidays">
+           <p>14</p>
+       </div>
+    </div>
+    <div id="Public-H" class="p-3 mb-2 bg-danger text-dark" data-toggle="tooltip" title="Public Holiday">
+       <div id="PH">
+          <p>9</p>
+       </div>
+	</div>
+	
+    <div id="last-next" class="p-3 mb-2 bg-secondary text-white" data-toggle="tooltip" title="Next/Last Month">
+       <div id="lastORnext">
+          <p>24</p>
+       </div>
+	</div>
+</div>
+
+<div id="keys">
+<h4>KeyQuotes/Phrases for the Day!</h4>
+<p id="phrases" class="text-danger"></p>
+</div>
+
+<button id="showAllMth" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Display ALL the months in the current year
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+	<li class="dropdown-header">All months</li>
+	<li>2019</li>
+	<li id="allmths"><a class="text-information" href="">January</a></li>
+	<li id="current" class="bg-success"><a class="text-body">February</a></li>
+	<li id="allmths"><a class="text-information" href="">March</a></li>
+	<li id="allmths"><a class="text-information" href="">April</a></li>
+	<li id="allmths"><a class="text-information" href="">May</a></li>
+	<li id="allmths"><a class="text-information" href="">June</a></li>
+	<li id="allmths"><a class="text-information" href="">July</a></li>
+	<li id="allmths"><a class="text-information" href="">August</a></li>
+	<li id="allmths"><a class="text-information" href="">September</a></li>
+	<li id="allmths"><a class="text-information" href="">October</a></li>
+	<li id="allmths"><a class="text-information" href="">November</a></li>
+	<li id="allmths"><a class="text-information" href="">December</a></li>
+	<li class="dropdown-header">Year(s)</li>
+	<li><button onclick="goto18()" class="btn btn-default">2018</button><button class="btn btn-warning">2019</button><button onclick="goto20" class="btn btn-default">2020</button><button onclick="goto21" class="btn btn-default" disabled>2021</button></li>
+    </ul>
+
+<button onclick="showhide()" type="button" class="btn btn-info">
+    <span class="glyphicon glyphicon-calendar"></span> Display/Hide the Calendar
+</button>
+
+<h3 style="margin-left:37px">Month/Year: <span class="important">February/2019</span></h3>
+
+<table id="smallCal" class="table table-striped">
+<tr>
+<th id="month" colspan="7">February 2019
+<button onclick="lastmth()" class="btn btn-success" id="previous">&#10094;</button>
+<button onclick="nextmth()" class="btn btn-success" id="next">&#10095;</button>
+</th>
+</tr>
+<tr>
+<th id="weekend">Sun</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+<tr>
+<td class="lastmth"><a id="lastmth" href="">27</td></a>
+<td class="lastmth"><a id="lastmth" href="">28</td></a>
+<td class="lastmth"><a id="lastmth" href="">29</td></a>
+<td class="lastmth"><a id="lastmth" href="">30</td></a>
+<td class="lastmth"><a id="lastmth" href="">31</td></a>
+<td><a href="">1</td></a>
+<td><a href="">2</td></a>
+</tr>
+<tr>
+<td id="weekend"><a class="text-danger" href="">3</td></a>
+<td><a href="">4</td></a>
+<td class="p-3 mb-2 bg-danger" data-toggle="tooltip" title="Chinese New Year"><a href="">5</td></a>
+<td class="p-3 mb-2 bg-danger" data-toggle="tooltip" title="Chinese New Year"><a href="">6</td></a>
+<td><a href="">7</td></a>
+<td><a href="">8</td></a>
+<td><a href="">9</td></a>
+</tr>
+<tr>
+<td id="weekend"><a class="text-danger" href="">10</td></a>
+<td><a href="">11</td></a>
+<td><a href="">12</td></a>
+<td><a href="">13</td></a>
+<td><a href="">14</td></a>
+<td><a href="">15</td></a>
+<td><a href="">16</td></a>
+</tr>
+<tr>
+<td id="weekend"><a class="text-danger" href="">17</td></a>
+<td><a href="">18</td></a>
+<td><a href="">19</td></a>
+<td><a href="">20</td></a>
+<td><a href="">21</td></a>
+<td><a href="">22</td></a>
+<td><a href="">23</td></a>
+</tr>
+<tr>
+<td id="weekend"><a class="text-danger" href="">24</td></a>
+<td><a href="">25</td></a>
+<td><a href="">26</td></a>
+<td><a href="">27</td></a>
+<td><a href="">28</td></a>
+<td class="nextmth"><a id="nextmth" href="">1</td></a>
+<td class="nextmth"><a id="nextmth" href="">2</td></a>
+</tr>
+</table>
+
+<script>
+function lastmth(){
+     window.location.replace("../pages/2019JanMthWADP.html");
+}
+function nextmth(){
+     window.location.replace("");
+}
+
+function showhide(){
+     var cal = document.getElementById("smallCal");
+	 if (cal.style.display === "none"){
+	      cal.style.display = "block";
+	 }
+	 else{
+	      cal.style.display = "none";
+	 }
+}
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+
+var keyquotes = ["Time is a great healer, but a poor beautician.<br>– Lucille S. Harper", "I am definitely going to take a course on time management… just as soon as I can work it into my schedule.<br>– Louis E. Boone", "Work expands so as to fill the time available for its completion.<br>–  Cyril Northcote Parkinson", "Your hardest times often lead to the greatest moments of your life. Keep going. Tough situations build strong people in the end.<br>― Roy T. Bennett,", "The trouble with being punctual is that nobody’s there to appreciate it.<br>– Franklin P. Jones", "If you have a dream, don’t just sit there. Gather courage to believe that you can succeed and leave no stone unturned to make it a reality.<br>― Roopleen", "I can accept failure, everyone fails at something. But I can't accept not trying.<br>- Michael Jordan"];
+var day = new Date();
+var daily = day.getDay();
+if (daily == 0){
+     document.getElementById("phrases").innerHTML = keyquotes[0];
+}
+if (daily == 1){
+     document.getElementById("phrases").innerHTML = keyquotes[1];
+}
+if (daily == 2){
+     document.getElementById("phrases").innerHTML = keyquotes[2];
+}
+if (daily == 3){
+     document.getElementById("phrases").innerHTML = keyquotes[3];
+}
+if (daily == 4){
+     document.getElementById("phrases").innerHTML = keyquotes[4];
+}
+if (daily == 5){
+     document.getElementById("phrases").innerHTML = keyquotes[5];
+}
+if (daily == 6){
+     document.getElementById("phrases").innerHTML = keyquotes[6];
+}
+
+function goto18(){
+     window.open("../pages/JulMthWADP.html");
+}
+</script>
+</body>
+</html>

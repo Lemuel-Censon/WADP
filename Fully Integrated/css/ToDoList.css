@@ -1,0 +1,99 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: rgb(218, 218, 218);
+	background-image: url("../images/Backgrounds/Greenwhite2.png")
+}	
+/*==============================================================================Fixing==========================================================================*/
+.pagination {
+	font-size: 15px;
+	text-align: center;
+}
+
+#lastwk, #nextwk {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+#Sun, #Mon, #Tue, #Wed, #Thu, #Fri {
+	margin-right: 110px;
+	margin-left: 18px;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+}
+
+#Sat {
+	margin-right: 18px;
+	margin-left: 18px;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+}
+
+h3 {
+	text-align: center;
+}
+
+.month {
+	border: 1px solid black;
+	
+}
+
+#left {
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+
+#right {
+	width: 80px;
+	height: 80px;
+	float: right;
+}
+
+/*==========================================================================================================================*/
+
+#container {
+	width: 98.5%;
+	min-height: 50vh;
+
+	background-color:whitesmoke;
+
+	padding: 20px 40px;
+	margin: auto;
+	margin-top: 12vh;
+
+	border: 2px solid lightgray;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+
+	
+}
+
+#planner{
+	border: 1px solid green;
+	padding: 10px;
+}
+
+#todostuff{
+	min-height: 40vh;
+	margin: auto;
+
+
+}
+
+
+div[id ^= "todolistsprint"]{
+	border: 2px solid lightgray;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	text-align: center;
+
+	margin: 20px;
+	padding: 10px;
+
+}

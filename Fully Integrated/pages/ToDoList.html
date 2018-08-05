@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title></title>
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+	 crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/ToDoList.css">
+
+	<link rel="stylesheet" href="../css/Nav2.css">
+	<link rel="stylesheet" href="../css/dropdownprofile.css">
+	<link rel="stylesheet" href="../css/loading.css">
+
+	<script src="../js/loadingscreen.js"></script>
+	<!-- <style>
+		#previous {
+			margin-top: 6px;
+			margin-right: 530px;
+		}
+
+		#next {
+			margin-top: 6px;
+			margin-left: 530px;
+		}
+
+		#ToDoList {
+			text-align: center;
+			border: 2px solid black;
+		}
+
+		h2 {
+			font-weight: bold;
+		}
+
+		#heading {
+			text-align: center;
+		}
+	</style> -->
+</head>
+
+<body onload="ifloggedin()">
+	<div id="overlay">
+		<div id="spinner"></div>
+	</div>
+
+	<div class="container-fluid">
+		<div id="container" class="row justify-content-center">
+
+			<div class="col-12">
+				<img id="left" src="../images/To-do_List.png">
+				<img id="right" src="../images/To-do_List.png">
+				<h3 id="heading">
+					To-Do-Lists Planner
+					<br> Plan all of your to-do-lists over here
+				</h3>
+			</div>
+
+			<div id="calendars" class="month col-12">
+
+				<div id="Julmth">
+					<h3>
+						<button id="previous" class="btn btn-info" onclick="">&#10094;</button>July 2018
+						<button id="next" class="btn btn-info" onclick="Aug()">&#10095;</button>
+					</h3>
+
+					<div class="pagination">
+						<div id="Jul">
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>1</a>
+							<a id="Mon" href="">Monday
+								<br>2</a>
+							<a id="Tue" href="">Tuesday
+								<br>3</a>
+							<a id="Wed" href="">Wednesday
+								<br>4</a>
+							<a id="Thu" href="">Thursday
+								<br>5</a>
+							<a id="Fri" href="">Friday
+								<br>6</a>
+							<a id="Sat" href="">Saturday
+								<br>7</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>8</a>
+							<a id="Mon" href="">Monday
+								<br>9</a>
+							<a id="Tue" href="">Tuesday
+								<br>10</a>
+							<a id="Wed" href="">Wednesday
+								<br>11</a>
+							<a id="Thu" href="">Thursday
+								<br>12</a>
+							<a id="Fri" href="">Friday
+								<br>13</a>
+							<a id="Sat" href="">Saturday
+								<br>14</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>15</a>
+							<a id="Mon" href="">Monday
+								<br>16</a>
+							<a id="Tue" href="">Tuesday
+								<br>17</a>
+							<a id="Wed" href="">Wednesday
+								<br>18</a>
+							<a id="Thu" href="">Thursday
+								<br>19</a>
+							<a id="Fri" href="">Friday
+								<br>20</a>
+							<a id="Sat" href="">Saturday
+								<br>21</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>22</a>
+							<a id="Mon" href="">Monday
+								<br>23</a>
+							<a id="Tue" href="">Tuesday
+								<br>24</a>
+							<a id="Wed" href="">Wednesday
+								<br>25</a>
+							<a id="Thu" href="">Thursday
+								<br>26</a>
+							<a id="Fri" href="">Friday
+								<br>27</a>
+							<a id="Sat" href="">Saturday
+								<br>28</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>29</a>
+							<a id="Mon" href="">Monday
+								<br>30</a>
+							<a id="Tue" href="">Tuesday
+								<br>31</a>
+							<a id="Wed" href="" class="text-secondary">Wednesday
+								<br>1</a>
+							<a id="Thu" href="" class="text-secondary">Thursday
+								<br>2</a>
+							<a id="Fri" href="" class="text-secondary">Friday
+								<br>3</a>
+							<a id="Sat" href="" class="text-secondary">Saturday
+								<br>4</a>
+
+
+						</div>
+					</div>
+				</div>
+				<div id="Augmth" style="display:none">
+					<h3>
+						<button id="previous" class="btn btn-info" onclick="Jul()">&#10094;</button>August 2018
+						<button id="next" class="btn btn-info" onclick="Sep()">&#10095;</button>
+					</h3>
+					<div class="pagination">
+						<div id="Aug">
+							<a id="Sun" class="text-secondary" href="">Sunday
+								<br>29</a>
+							<a id="Mon" class="text-secondary" href="">Monday
+								<br>30</a>
+							<a id="Tue" class="text-secondary" href="">Tuesday
+								<br>31</a>
+							<a id="Wed" href="">Wednesday
+								<br>1</a>
+							<a id="Thu" href="">Thursday
+								<br>2</a>
+							<a id="Fri" href="">Friday
+								<br>3</a>
+							<a id="Sat" href="">Saturday
+								<br>4</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>5</a>
+							<a id="Mon" href="">Monday
+								<br>6</a>
+							<a id="Tue" href="">Tuesday
+								<br>7</a>
+							<a id="Wed" href="">Wednesday
+								<br>8</a>
+							<a id="Thu" href="" class="text-danger" data-toggle="tooltip" title="National Day">Thursday
+								<br>9</a>
+							<a id="Fri" href="">Friday
+								<br>10</a>
+							<a id="Sat" href="">Saturday
+								<br>11</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>12</a>
+							<a id="Mon" href="">Monday
+								<br>13</a>
+							<a id="Tue" href="">Tuesday
+								<br>14</a>
+							<a id="Wed" href="">Wednesday
+								<br>15</a>
+							<a id="Thu" href="">Thursday
+								<br>16</a>
+							<a id="Fri" href="">Friday
+								<br>17</a>
+							<a id="Sat" href="">Saturday
+								<br>18</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>19</a>
+							<a id="Mon" href="">Monday
+								<br>20</a>
+							<a id="Tue" href="">Tuesday
+								<br>21</a>
+							<a id="Wed" href="" data-toggle="tooltip" title="Hari Raya Haji" class="text-danger">Wednesday
+								<br>22</a>
+							<a id="Thu" href="">Thursday
+								<br>23</a>
+							<a id="Fri" href="">Friday
+								<br>24</a>
+							<a id="Sat" href="">Saturday
+								<br>25</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>26</a>
+							<a id="Mon" href="">Monday
+								<br>27</a>
+							<a id="Tue" href="">Tuesday
+								<br>28</a>
+							<a id="Wed" href="">Wednesday
+								<br>29</a>
+							<a id="Thu" href="">Thursday
+								<br>30</a>
+							<a id="Fri" href="">Friday
+								<br>31</a>
+							<a id="Sat" class="text-secondary" href="">Saturday
+								<br>1</a>
+
+						</div>
+					</div>
+				</div>
+				<div id="Sepmth" style="display:none">
+					<h3>
+						<button id="previous" class="btn btn-info" onclick="backAug()">&#10094;</button>September 2018
+						<button id="next" class="btn btn-info" onclick="Oct()">&#10095;</button>
+					</h3>
+					<div class="pagination">
+						<div id="Sep">
+							<a id="Sun" class="text-secondary" href="">Sunday
+								<br>26</a>
+							<a id="Mon" class="text-secondary" href="">Monday
+								<br>27</a>
+							<a id="Tue" class="text-secondary" href="">Tuesday
+								<br>28</a>
+							<a id="Wed" class="text-secondary" href="">Wednesday
+								<br>29</a>
+							<a id="Thu" class="text-secondary" href="">Thursday
+								<br>30</a>
+							<a id="Fri" class="text-secondary" href="">Friday
+								<br>31</a>
+							<a id="Sat" href="">Saturday
+								<br>1</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>2</a>
+							<a id="Mon" href="">Monday
+								<br>3</a>
+							<a id="Tue" href="">Tuesday
+								<br>4</a>
+							<a id="Wed" href="">Wednesday
+								<br>5</a>
+							<a id="Thu" href="">Thursday
+								<br>6</a>
+							<a id="Fri" href="">Friday
+								<br>7</a>
+							<a id="Sat" href="">Saturday
+								<br>8</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>9</a>
+							<a id="Mon" href="">Monday
+								<br>10</a>
+							<a id="Tue" href="">Tuesday
+								<br>11</a>
+							<a id="Wed" href="">Wednesday
+								<br>12</a>
+							<a id="Thu" href="">Thursday
+								<br>13</a>
+							<a id="Fri" href="">Friday
+								<br>14</a>
+							<a id="Sat" href="">Saturday
+								<br>15</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>16</a>
+							<a id="Mon" href="">Monday
+								<br>17</a>
+							<a id="Tue" href="">Tuesday
+								<br>18</a>
+							<a id="Wed" href="">Wednesday
+								<br>19</a>
+							<a id="Thu" href="">Thursday
+								<br>20</a>
+							<a id="Fri" href="">Friday
+								<br>21</a>
+							<a id="Sat" href="">Saturday
+								<br>22</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>23</a>
+							<a id="Mon" href="">Monday
+								<br>24</a>
+							<a id="Tue" href="">Tuesday
+								<br>25</a>
+							<a id="Wed" href="">Wednesday
+								<br>26</a>
+							<a id="Thu" href="">Thursday
+								<br>27</a>
+							<a id="Fri" href="">Friday
+								<br>28</a>
+							<a id="Sat" href="">Saturday
+								<br>29</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>30</a>
+							<a id="Mon" class="text-secondary" href="">Monday
+								<br>1</a>
+							<a id="Tue" class="text-secondary" href="">Tuesday
+								<br>2</a>
+							<a id="Wed" class="text-secondary" href="">Wednesday
+								<br>3</a>
+							<a id="Thu" class="text-secondary" href="">Thursday
+								<br>4</a>
+							<a id="Fri" class="text-secondary" href="">Friday
+								<br>5</a>
+							<a id="Sat" class="text-secondary" href="">Saturday
+								<br>6</a>
+
+						</div>
+					</div>
+				</div>
+				<div id="Octmth" style="display:none">
+					<h3>
+						<button id="previous" class="btn btn-info" onclick="backSep()">&#10094;</button>October 2018
+						<button id="next" class="btn btn-info" onclick="Nov()">&#10095;</button>
+					</h3>
+					<div class="pagination">
+						<div id="Oct">
+							<a id="Sun" class="text-secondary" href="">Sunday
+								<br>30</a>
+							<a id="Mon" href="">Monday
+								<br>1</a>
+							<a id="Tue" href="">Tuesday
+								<br>2</a>
+							<a id="Wed" href="">Wedesday
+								<br>3</a>
+							<a id="Thu" href="">Thursday
+								<br>4</a>
+							<a id="Fri" href="">Friday
+								<br>5</a>
+							<a id="Sat" href="">Saturday
+								<br>6</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>7</a>
+							<a id="Mon" href="">Monday
+								<br>8</a>
+							<a id="Tue" href="">Tuesday
+								<br>9</a>
+							<a id="Wed" href="">Wedesday
+								<br>10</a>
+							<a id="Thu" href="">Thursday
+								<br>11</a>
+							<a id="Fri" href="">Friday
+								<br>12</a>
+							<a id="Sat" href="">Saturday
+								<br>13</a>
+							<br>
+							<a id="Sun" class="text-danger">Sunday
+								<br>14</a>
+							<a id="Mon" href="">Monday
+								<br>15</a>
+							<a id="Tue" href="">Tuesday
+								<br>16</a>
+							<a id="Wed" href="">Wedesday
+								<br>17</a>
+							<a id="Thu" href="">Thursday
+								<br>18</a>
+							<a id="Fri" href="">Friday
+								<br>19</a>
+							<a id="Sat" href="">Saturday
+								<br>20</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>21</a>
+							<a id="Mon" href="">Monday
+								<br>22</a>
+							<a id="Tue" href="">Tuesday
+								<br>23</a>
+							<a id="Wed" href="">Wedesday
+								<br>24</a>
+							<a id="Thu" href="">Thursday
+								<br>25</a>
+							<a id="Fri" href="">Friday
+								<br>26</a>
+							<a id="Sat" href="">Saturday
+								<br>27</a>
+							<br>
+							<a id="Sun" class="text-danger" href="">Sunday
+								<br>28</a>
+							<a id="Mon" href="">Monday
+								<br>29</a>
+							<a id="Tue" href="">Tuesday
+								<br>30</a>
+							<a id="Wed" href="">Wedesday
+								<br>31</a>
+							<a id="Thu" class="text-secondary" href="">Thursday
+								<br>1</a>
+							<a id="Fri" class="text-secondary" href="">Friday
+								<br>2</a>
+							<a id="Sat" class="text-secondary" href="">Saturday
+								<br>3</a>
+
+						</div>
+					</div>
+				</div>
+				<div id="Novmth" style="display:none">
+					<h3>
+						<button id="previous" class="btn btn-info" onclick="backOct()">&#10094;</button>November 2018
+						<button id="next" class="btn btn-info" onclick="Dec()">&#10095;</button>
+					</h3>
+					<div class="pagination">
+						<div id="Nov">
+							<a id="Sun" href="" class="text-secondary">Sunday
+								<br>28</a>
+							<a id="Mon" href="" class="text-secondary">Monday
+								<br>29</a>
+							<a id="Tue" href="" class="text-secondary">Tuesday
+								<br>30</a>
+							<a id="Wed" href="" class="text-secondary">Wenesday
+								<br>31</a>
+							<a id="Thu" href="">Thursday
+								<br>1</a>
+							<a id="Fri" href="">Friday
+								<br>2</a>
+							<a id="Sat" href="">Saturday
+								<br>3</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>4</a>
+							<a id="Mon" href="">Monday
+								<br>5</a>
+							<a id="Tue" href="" data-toggle="tooltip" title="Deepavali" class="text-danger">Tuesday
+								<br>6</a>
+							<a id="Wed" href="">Wedneaday
+								<br>7</a>
+							<a id="Thu" href="">Thursday
+								<br>8</a>
+							<a id="Fri" href="">Friday
+								<br>9</a>
+							<a id="Sat" href="">Saturday
+								<br>10</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>11</a>
+							<a id="Mon" href="">Monday
+								<br>12</a>
+							<a id="Tue" href="">Tuesday
+								<br>13</a>
+							<a id="Wed" href="">Wedneaday
+								<br>14</a>
+							<a id="Thu" href="">Thursday
+								<br>15</a>
+							<a id="Fri" href="">Friday
+								<br>16</a>
+							<a id="Sat" href="">Saturday
+								<br>17</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>18</a>
+							<a id="Mon" href="">Monday
+								<br>19</a>
+							<a id="Tue" href="">Tuesday
+								<br>20</a>
+							<a id="Wed" href="">Wedneaday
+								<br>21</a>
+							<a id="Thu" href="">Thursday
+								<br>22</a>
+							<a id="Fri" href="">Friday
+								<br>23</a>
+							<a id="Sat" href="">Saturday
+								<br>24</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>25</a>
+							<a id="Mon" href="">Monday
+								<br>26</a>
+							<a id="Tue" href="">Tuesday
+								<br>27</a>
+							<a id="Wed" href="">Wedneaday
+								<br>28</a>
+							<a id="Thu" href="">Thursday
+								<br>29</a>
+							<a id="Fri" href="">Friday
+								<br>30</a>
+							<a id="Sat" href="" class="text-secondary">Saturday
+								<br>1</a>
+
+						</div>
+					</div>
+				</div>
+				<div id="Decmth" style="display:none">
+					<h3>
+						<button id="previous" class="btn btn-info" onclick="backNov()">&#10094;</button>December 2018
+						<button id="next" class="btn btn-info" onclick="">&#10095;</button>
+					</h3>
+					<div class="pagination">
+						<div id="Dec">
+							<a id="Sun" href="" class="text-secondary">Sunday
+								<br>25</a>
+							<a id="Mon" href="" class="text-secondary">Monday
+								<br>26</a>
+							<a id="Tue" href="" class="text-secondary">Tuesday
+								<br>27</a>
+							<a id="Wed" href="" class="text-secondary">Wenesday
+								<br>28</a>
+							<a id="Thu" href="" class="text-secondary">Thursday
+								<br>29</a>
+							<a id="Fri" href="" class="text-secondary">Friday
+								<br>30</a>
+							<a id="Sat" href="">Saturday
+								<br>1</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>2</a>
+							<a id="Mon" href="">Monday
+								<br>3</a>
+							<a id="Tue" href="">Tuesday
+								<br>4</a>
+							<a id="Wed" href="">Wedneaday
+								<br>5</a>
+							<a id="Thu" href="">Thursday
+								<br>6</a>
+							<a id="Fri" href="">Friday
+								<br>7</a>
+							<a id="Sat" href="">Saturday
+								<br>8</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>9</a>
+							<a id="Mon" href="">Monday
+								<br>10</a>
+							<a id="Tue" href="">Tuesday
+								<br>11</a>
+							<a id="Wed" href="">Wedneaday
+								<br>12</a>
+							<a id="Thu" href="">Thursday
+								<br>13</a>
+							<a id="Fri" href="">Friday
+								<br>14</a>
+							<a id="Sat" href="">Saturday
+								<br>15</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>16</a>
+							<a id="Mon" href="">Monday
+								<br>17</a>
+							<a id="Tue" href="">Tuesday
+								<br>18</a>
+							<a id="Wed" href="">Wedneaday
+								<br>19</a>
+							<a id="Thu" href="">Thursday
+								<br>20</a>
+							<a id="Fri" href="">Friday
+								<br>21</a>
+							<a id="Sat" href="">Saturday
+								<br>22</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>23</a>
+							<a id="Mon" href="">Monday
+								<br>24</a>
+							<a id="Tue" href="" data-toggle="tooltip" title="Christmas Day" class="text-danger">Tuesday
+								<br>25</a>
+							<a id="Wed" href="">Wedneaday
+								<br>26</a>
+							<a id="Thu" href="">Thursday
+								<br>27</a>
+							<a id="Fri" href="">Friday
+								<br>28</a>
+							<a id="Sat" href="">Saturday
+								<br>29</a>
+							<br>
+							<a id="Sun" href="" class="text-danger">Sunday
+								<br>30</a>
+							<a id="Mon" href="">Monday
+								<br>31</a>
+							<a id="Tue" href="" class="text-secondary" data-toggle="tooltip" title="New Year Day">Tuesday
+								<br>1</a>
+							<a id="Wed" href="" class="text-secondary">Wedneaday
+								<br>2</a>
+							<a id="Thu" href="" class="text-secondary">Thursday
+								<br>3</a>
+							<a id="Fri" href="" class="text-secondary">Friday
+								<br>4</a>
+							<a id="Sat" href="" class="text-secondary">Saturday
+								<br>5</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="planner" class="col-12">
+				<table id="ToDoList" class="table table-striped" border="1">
+					<tr>
+						<th colspan="3">
+							<h2>Set your To-Do-Lists here and click on the instructions button to lern how to use the to-do-list
+								<h2>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<h2>Time Slot</h2>
+							<br>Enter you time here(Example: 1pm - 2pm)</th>
+						<th>
+							<h2>Details of your to-do-lists</h2>
+							<br>Enter your to-do-lists here(Example: Do WADP Practical 4 worksheet)</th>
+						<th>
+							<h2>Remarks</h2>
+							<br>Enter any other Important notes to take note(Example: For revision of examination)</th>
+					</tr>
+					<tr>
+						<td>
+							<label>Day:</label>
+							<br>
+							<input id="timeDay" type="text">
+							<label>From(Start):</label>
+							<br>
+							<input id="timeStart" type="text">
+							<br>
+							<label>To(End):</label>
+							<br>
+							<input id="timeEnds" type="text">
+						</td>
+						<td>
+							<textarea rows="5" cols="36" id="list" type="text"></textarea>
+						</td>
+						<td>
+							<textarea rows="5" cols="36" id="comments" type="text"></textarea>
+						</td>
+					</tr>
+				</table>
+
+				<button type="button" onclick="submit()" class="btn btn-danger">Submit your inputs</button>
+				<button type="button" onclick="goback()" class="btn btn-danger">Back to the Calendar home page</button>
+			</div>
+
+
+		</div>
+		<div id="container" class="container-fluid">
+				<h1 class="col-12 text-center">To Do List</h1>
+			<div id="todostuff" class="col-12 row justify-content-start">
+				
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<script src="../js/essentials.js"></script>
+	<script src="../js/login2.js"></script>
+	<script src="../js/ToDoList.js"></script>
+</body>
+
+</html>

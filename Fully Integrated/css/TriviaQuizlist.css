@@ -1,0 +1,232 @@
+/* adds padding and border to every element */
+*, :after, :before {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ a,  a:active,a:hover, a:link, a:visited {
+    outline-style: none;
+}
+/* Positions image in center */
+img[class="quizlist_images"]{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  div[class="quizlist_items"]{
+    display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: -5px;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  }
+  /* the div containing the quizzes in one row are displayed at 100% width */
+  div[class="quizlist_items_row"]{
+    display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width:100%;
+  }
+  div[class="quizlist_item"]{
+    margin: 5px;
+    -ms-flex: none;
+    flex: none;
+    width: calc(100% - 10px);
+  }
+  div[class="quizlist_panel"]{
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #555;
+  }
+  /* Styles the panel withe the username */
+  div[class="quizlist_panel_panel"]{
+    -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+  }
+  /* casts a shadow behind the quiz panel */
+  div[class="quizlist_panel_shadow"]{
+    border-radius: 4px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    -webkit-transition: all .12s ease-in-out;
+    transition: all .12s ease-in-out;
+    pointer-events: none;
+  }
+  /* Styles img from light to dark*/
+  div[class="quizlist_panel_image_overlay"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: " ";
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.1)),to(rgba(0,0,0,.7)));
+    background-image: linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.7));
+  }
+  /* Count box on top right of every quiz */
+  div[class="quizlist_count_box"]{
+    position: absolute;
+      right: 10px;
+      top: 10px;
+  }
+  div[class="quizlist_count"]{
+    display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+  }
+  /* Adjust number */
+  span[class="playcount"]{
+    padding-right: 5px;
+  }
+  a[class="quizlist_panel_header"]{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,.75);
+    /* background-image: url(); */
+    background-position: 50%;
+    background-size: cover;
+    font-weight: 400;
+    font-style: italic;
+    height: 120px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+  }  
+  /* positions the title of quiz */
+  div[class="quiz_title"]{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+  }
+  /* styles how the title will look like */
+  div[class="title_text"]{
+    font-size: 130%;
+    text-shadow: 0 2px 4px rgba(0,0,0,.75);
+    font-weight: 600;
+    white-space: nowrap!important;
+    text-overflow: ellipsis!important;
+    overflow: hidden!important;
+  }
+  /* Quiz info panel below img*/
+div[class="quiz_panel_content"]{
+    height: 75px;
+    padding: 10px 10px 10px 10px;
+}
+div[class="content_row"]{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+/* styles the author name */
+div[class="source_box"]{
+    font-size: 70%;
+    font-weight: 600;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+/* overrides other rules for the user box */
+div[class="user"]{
+    white-space: nowrap!important;
+    text-overflow: ellipsis!important;
+    overflow: hidden!important;
+}
+/* styles the words typed in by user in searchbar */
+input[class="search_input"]{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    padding-right: 55px;
+    font-style: italic;
+    font-weight: lighter;
+}
+/* positions search icon div onthe right of searchbar */
+div[class="search_icon"]{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+/* styles the search icon */
+i[class="icon"]{
+    -ms-flex: none;
+    flex: none;
+    font-weight:900;
+    font-family: Font Awesome\ 5 Free;
+}
+div[class="search_quizzes"]{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: rgb(14, 177, 115);
+    font-size: 20px;
+    margin: 0 -10px;
+}
+/* every page style */
+div[class="pages"]{
+  height: 1230px; 
+  padding-top: 0px; 
+  box-sizing: border-box;
+}
+/* styles background of searchbar */
+div[class="search_container"]{
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    background: #000;
+    font-size: 13px;
+}
+div[class="search_header"]{
+  margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+div[class="layout_section"]{
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+/* styles a div behind quizzes */
+div[class="quizlist_undefined"]{
+  background-color: #eee;
+    padding: 20px;
+}
+/* When width>900px, width is 50%%-10px */
+@media (min-width: 900px){
+div[class="quizlist_item"] {
+    width: calc(50% - 10px);
+}
+}

@@ -1,0 +1,40 @@
+body {
+	background-color: rgb(218, 218, 218);
+	background-image: url("../images/Backgrounds/Greenwhite2.png")
+}	
+
+#container{
+    width:98.5%;
+    min-height: 80vh;
+
+    margin:auto;
+    margin-top:12vh;
+	width: 98.5%;
+	border: 2px solid lightgray;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+    background-color: #fff;
+    padding: 20px 40px;
+    
+}
+
+#container h1{
+    margin: 12px auto;
+    text-align: center;
+    color: green;
+}
+
+#container p{
+    text-align: center; 
+    color:brown;
+}
+
+#email{
+    color:blue;
+    text-decoration: underline;
+    
+}
+
+#email:hover{
+    cursor: pointer;
+}

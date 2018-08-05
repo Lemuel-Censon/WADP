@@ -1,0 +1,10 @@
+div[class="well questbg"]{
+  background-color: rgb(189, 245, 189)
+}
+#progressbar {
+  width: 500px;
+  height: 20px;
+  position: fixed;
+  left: 50%;
+  margin: -10px 0 0 -250px;
+}

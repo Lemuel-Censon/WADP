@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+	background-color: rgb(218, 218, 218);
+    background-image: url("../images/Backgrounds/Greenwhite2.png");
+    background-attachment: fixed;
+}	
+#container{
+    margin-top:12vh;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+#container #col1> div, #container #col2 > div{
+    border:1px solid lightgray;
+	box-shadow: 3px 3px 5px lightgray;
+    border-radius: 1%;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+#profiledetails{
+    margin-bottom: 20px;
+    min-height: 50vh;
+}
+
+#recentactivity{
+    margin-bottom: 20px;
+    min-height: 80vh;
+    padding-bottom: 50px;
+}
+
+#titles{
+    min-height: 50vh;
+    max-height: 80vh;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    
+}
+
+#badges{
+    min-height: 20vh;
+    padding-bottom: 50px;
+}
+
+/* Profile Details */
+
+
+#profiledetails img{
+    width: 200px;
+    max-height: 200px;
+   
+}
+
+#profiledetails img:hover{
+    cursor: pointer;
+}
+
+#detailname{
+    font-size:28px;
+}
+
+#changepicbutton{
+    margin-top:10px;
+}
+
+#addfriend{
+    margin-bottom:20px;
+}
+/* Modal */
+
+.imgcontainer{
+    width:100px;
+    height: 100px;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+}
+
+#imglist img{
+    width:auto;
+    height: 100px;
+    padding:10px;
+}
+
+#imglist img:hover{
+    cursor: pointer;
+}
+
+#custompic{
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+/* Title */
+
+#titleslist{
+    border: 1px solid gray;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: auto;
+    height: 265px;
+    margin-bottom: 20px;
+}
+
+#titlebutton{
+    float: right;
+    transform: translateY(-5px);
+}
+/*Recent Activity*/
+
+#activites{
+    border: 1px solid gray;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 400px;
+}
+
+/*Friends */
+
+#friendlist{
+
+    height: 150px;
+    overflow-y: hidden;
+    
+}
+
+#friendlisttable{
+    border: 1px solid gray;
+    height: 150px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; 
+    box-sizing: border-box;   
+    
+}
+
+#friendlisttable > div{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#friendimages{
+    width: 80px;
+    height: 80px;
+    border:1px solid white;
+    
+
+}
+
+#friendinfowords{
+    font-size:15px;
+}
+
+#plus{
+    font-size: 50px;
+    font-weight: bold;
+    width: 85px;
+    margin-left:20px;
+    margin-top: 50%;
+    transform: translateY(-25%)
+    
+}
+
+
+/* Badge */
+
+#badgelist{
+    border: 1px solid gray;
+    height: 119px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;    
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+#badgelist img{
+    height: 100px;
+    
+    
+}
+
+#badgeimgcontainer{
+    margin: 0px 10px;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#badgeoverlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: green;
+}
+
+#badgeoverlay:hover{
+    opacity: 0.9;
+    cursor: default;
+    box-sizing: border-box;
+    border:4px solid burlywood;
+}
+
+#pictext{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    
+
+    /*-webkit- is for Safari and Chrome
+     -moz- is for Firefox
+     -ms- is for Microsoft */
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+}
+
+#white{
+    color: white;
+}
+
+/*=============================================================*/
+
+#todocontainer {
+	width: 98.5%;
+	min-height: 50vh;
+
+	background-color:whitesmoke;
+
+	padding: 20px 40px;
+	margin: auto;
+
+	border: 2px solid lightgray;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+
+	
+}
+
+#planner{
+	border: 1px solid green;
+	padding: 10px;
+}
+
+#todostuff{
+	min-height: 40vh;
+	margin: auto;
+
+
+}
+
+
+div[id ^= "todolistsprint"]{
+	border: 2px solid green;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	text-align: center;
+
+	margin: 20px;
+	padding: 10px;
+
+}

@@ -1,0 +1,16 @@
+
+#trivias{
+    min-height: 100vh;
+}
+h1 .btn{
+    font-size: 20px;
+}
+.thumbnail{
+    text-align: center;
+    align-items: center;
+    width: 75%;
+    display: inline-block;
+    *display: inline;
+    position: relative;
+    left: 120px;
+}

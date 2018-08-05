@@ -1,0 +1,17 @@
+#messagecontainer{
+    
+    margin: auto;
+    margin-top:12vh;
+    width: 98.5%;
+    border: 2px solid lightgray;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding:20px;
+
+    font-size: 20px;
+}
+
+#messagesview{
+    min-height: 70vh;
+    border: 1px solid black;
+}

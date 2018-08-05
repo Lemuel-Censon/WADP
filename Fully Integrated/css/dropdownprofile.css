@@ -1,0 +1,129 @@
+/* Header */
+
+#header{
+    margin: 0 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    height:60px;
+}
+
+#header:hover{
+    background-color: rgb(248, 248, 248);
+}
+#header img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    transform: translateX(-23px)
+}
+
+#header p{
+    text-decoration: none;
+    float: right;
+    font-size: 14px;
+    transform: translateY(14px) translateX(12px);
+}
+
+/* Profile */
+
+#profile{
+    height: 50px;
+    
+}
+#profile img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    transform: translateX(-10px);
+    border:1px solid gray;
+    
+}
+
+#profile p{
+    float: right;
+    font-size:18px;
+    transform: translateY(5px)
+}
+
+/*Messages*/
+
+#messages{
+    height: 50px;
+}
+
+#messages img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    transform: translateX(-10px);
+    border:1px solid darkgreen;
+}
+#messages p{
+    float: right;
+    font-size:18px;
+    transform: translateY(5px)
+}
+
+/*Achievements*/
+#achievements{
+    height: 50px;
+}
+
+#achievements img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    transform: translateX(-10px);
+    border:1px solid darkgreen;
+}
+#achievements p{
+    float: right;
+    font-size:18px;
+    transform: translateY(5px)
+}
+
+/* Logout */
+
+#logout{
+    height: 50px;
+    
+}
+#logout img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    transform: translateX(-10px);
+    border: 1px solid gray;
+    
+}
+
+#logout p{
+    float: right;
+    font-size:18px;
+    transform: translateY(5px)
+}
+
+@media screen and (max-width: 767px) {
+    #header p{
+        text-decoration: none;
+        float: right;
+        font-size: 17px;
+        transform: translateY(6px)
+    }
+    #header img{
+        width:auto;
+        height: 40px;
+        float: left;
+        transform: translateX(-23px)
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+
+}

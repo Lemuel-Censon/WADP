@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Day Minigame</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/Minigame.css">
+
+
+    <link rel="stylesheet" href="../css/Nav2.css">
+    <link rel="stylesheet" href="../css/dropdownprofile.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loadingscreen.js"></script>
+
+
+    <!-- Bootstrap-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="displayGame(); ifloggedin()">
+
+    <div id="overlay">
+        <div id="spinner"></div>
+    </div>
+
+
+    <div id="game" class="container-fluid">
+
+        <h1 class="text-center"> Minigame </h1>
+
+        <div id="minigame" class="row justify-content-start">
+            <div class="col-12">
+                <p id="gametitle">Forest Fire Run!</p>
+                <br>
+                <p>In this game, you are a runner who has discovered a raging forest fire in the forest near your home. Trees
+                    are burning and you must avoid getting burned or the game is over. Use the up and down keys to navigate
+                    the runner through the forest. Collect trash as you progress to score bonus points. How far can you get
+                    before you get burned down?</p>
+                <br>
+                <p>Select difficulty:</p>
+
+            </div>
+
+
+            <div class="row justify-content-around col-12">
+                <button id="easy" class="btn btn-success col-lg-2 col-md-3 col-sm-12" onclick="GameInstructionsEasy()"> Easy </button>
+                <button id="medium" class="btn btn-warning col-lg-2 col-md-3 col-sm-12" onclick="GameInstructionsMedium()"> Medium </button>
+                <button id="hard" class="btn btn-danger col-lg-2 col-md-3 col-sm-12" onclick="GameInstructionsHard()"> Hard </button>
+
+
+            </div>
+            <br>
+
+
+            <div class="row justify-content-center col-12">
+                <button id="highscore" class="btn btn-primary col-lg-10 col-md-11 col-sm-12" onclick="GameLeaderboard()"> Leaderboard </button>
+            </div>
+
+
+            <!-- 
+            <ul id="difficulty">
+                <li id="easy" onclick="GameInstructionsEasy()">Easy</li>
+                <li id="medium" onclick="GameInstructionsMedium()">Medium</li>
+                <li id="hard" onclick="GameInstructionsHard()">Hard</li>
+                <ul>
+                    <li id="highscore" onclick="GameLeaderboard()">Leaderboard</li>
+                </ul>
+            </ul> -->
+        </div>
+
+
+
+        <div id="instructionseasy">
+            You selected
+            <!-- <span id="easystyle">Easy</span>! -->
+            <button class="btn btn-success col-lg-2 col-md-4"> Easy </button>!
+            <br>
+            <br> The forest fire is mild and it travels slowly. However, your running speed will be slow.
+            <br>
+            <br> Good luck!
+            <br>
+            <br> Game starting in
+            <span id="mycountdown">3</span> seconds!
+        </div>
+
+
+        <div id="instructionsmedium">
+            You selected
+            <!-- <span id="mediumstyle">Medium</span>! -->
+            <button class="btn btn-warning col-lg-2 col-md-4"> Medium </button>!
+            <br>
+            <br> The forest fire is rather ferocious and it spreads faster. Your running speed will be average.
+            <br>
+            <br> Good luck!
+            <br>
+            <br> Game starting in
+            <span id="mycountdown">3</span> seconds!
+        </div>
+
+
+        <div id="instructionshard">
+            You selected
+            <!-- <span id="hardstyle">Hard</span>! -->
+            <button class="btn btn-danger col-lg-2 col-md-4"> Hard </button>!
+            <br>
+            <br> The forest fire is at its greatest rage and it spreads real fast! Your running speed will be fast.
+            <br>
+            <br> Good luck!
+            <br>
+            <br> Game starting in
+            <span id="mycountdown">3</span> seconds!
+        </div>
+
+
+        <div id="leaderboard" class="container-fluid">
+            <div class="row jusify-content-center">
+                <div class="col-12">
+                    <h1>High Scores</h1>
+                </div>
+
+
+                <div id="container" class="col-12 ">
+
+                    <table class="table table-bordered table-light col-12">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Position</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                                
+                            </tr>
+                        </thead>
+
+                        <tbody id="highscores">
+                            <tr style="background-color: gold; color: white; text-shadow: 0px 0px 5px black;">
+                                <td>1</td>
+                                <td id="no1name">Name</td>
+                                <td id="no1score">Score</td>
+                                
+                            </tr>
+
+                            <tr style="background-color: silver; color: white; text-shadow: 0px 0px 5px black;">
+                                <td>2</td>
+                                <td id="no2name">Name</td>
+                                <td id="no2score">Score</td>
+                                
+                            </tr>
+
+                            <tr style="background-color: brown; color: white; text-shadow: 0px 0px 5px black;">
+                                <td>3</td>
+                                <td id="no3name">Name</td>
+                                <td id="no3score">Score</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td id="no4name">Name</td>
+                                <td id="no4score">Score</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td id="no5name">Name</td>
+                                <td id="no5score">Score</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="col-12">
+                    <button class="btn btn-secondary col-12" onclick="returnMainMenu()">Return to Main Menu</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="../js/essentials.js"></script>
+    <script src="../js/login2.js"></script>
+
+    <script src="../js/Minigame.js"></script>
+</body>
+
+</html>

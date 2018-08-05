@@ -1,0 +1,40 @@
+div[id^="popup"]{
+    border: 3px solid rgb(231, 231, 231);
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    position: fixed;
+    bottom: 3vh;
+    z-index: 9001;
+    padding: 10px;
+    margin: auto;
+    display: none;
+}
+
+div[id^="popup"] p, div[id^="popup"] h1{
+    text-align: center;
+    color: green;
+}
+
+@media screen and (max-width: 767px) {
+    #popup p{
+        font-size: 12px;
+    }
+
+    #popup h1{
+        font-size: 20px;
+    }
+
+    #popup{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+}

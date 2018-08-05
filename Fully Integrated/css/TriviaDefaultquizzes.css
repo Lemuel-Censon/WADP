@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+}
+
+body{
+    font-family: "Exo 2","Helvetica Neue",Tahoma,Arial,"Hiragino Kaku Gothic ProN","Microsoft YaHei","Apple SD Gothic Neo",sans-serif;
+    
+    background-color: rgb(218, 218, 218);
+    background-image: url("../images/Backgrounds/Greenwhite2.png");
+    background-attachment: fixed;
+}
+
+#container{
+    width: 98.5%;
+	min-height: 50vh;
+
+	background-color:whitesmoke;
+
+	padding: 20px 40px;
+    margin: auto auto;
+    
+
+	border: 2px solid lightgray;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}

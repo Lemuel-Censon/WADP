@@ -1,0 +1,435 @@
+*{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+}
+
+/* html{
+    overflow: auto;
+} */
+
+/*For loading screen*/
+
+/* body{
+    overflow: hidden;
+} */
+
+
+
+
+/* For welcome screen */
+
+#welcome{
+    width: 100%;
+    height: 100%;
+    /* background-image: url("../images/stone.jpg") */
+    /* display: none; */
+    /* overflow: hidden; */
+    /* border: 1px solid red; */
+    overflow-x: hidden;
+    
+}
+#right{
+    position: absolute;
+    top:42%;
+    color: darkgreen;
+    
+    
+    right:50px;
+    z-index: 10;
+}
+#right span{
+    position: relative;
+    
+    left:30%;
+    font-size: 60px;
+}
+
+#right span:hover{
+    color:white;
+    cursor: pointer;
+}
+
+#left{
+    position: absolute;
+    top:42%;
+    color: darkgreen;
+    display: none;
+    
+    left:50px;
+    z-index: 10;
+}
+#left span{
+    position: relative;
+    
+    right:30%;
+    font-size: 60px;
+}
+
+#left span:hover{
+    color:white;
+    cursor: pointer;
+}
+
+#slider{
+    width:600%;
+    height: 100vh;
+    overflow: hidden;
+    /* margin-left: -200%; */
+    /* animation: left 15s linear;
+    animation-fill-mode: forwards; */
+    margin-left:0%;
+    
+}
+
+/* #slider:active{
+    opacity: 0.9;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+} */
+/* #slider figure{
+    animation: left 2s linear infinite;
+}
+*/
+@keyframes left{
+    0%{
+        margin-left: 0%;
+    }
+    17%{
+        margin-left:0%;
+    }
+    20%{
+        margin-left:-100%;
+    }
+    37%{
+        margin-left:-100%;
+    }
+    40%{
+        margin-left:-200%
+    }
+    57%{
+        margin-left:-200%
+    }
+    60%{
+        margin-left:-300%;
+    }
+    77%{
+        margin-left:-300%;
+    }
+    80%{
+        margin-left:-400%;
+    }
+    97%{
+        margin-left:-400%;
+    }
+    99%{
+        margin-left:-500%;
+    }
+    100%{
+        margin-left:-500%;
+    }
+}
+
+#welcometext{
+    position: relative;
+    width: 16.6666667%;
+    height: 100vh;
+    /* top: 270px; */
+    /* animation: float 5s linear infinite; */
+    float: left;
+    background-image: url("../images/stone.jpg")
+    
+}
+
+#welcometext h1{
+    margin-top:250px;
+    color:white;
+    text-align: center;
+    font-size:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: float 5s linear infinite;
+    
+}
+
+#welcometext p{
+    margin-top:30px;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: float 5s linear infinite;    
+}
+
+#welcome2{
+    width: 16.6666667%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    float:left;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid white; */
+    
+}
+
+#welcome2 p{
+    margin-top:20px;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: float 5s linear infinite;
+
+}
+
+.map{
+    width:60%;
+    position: absolute;
+    left:20%
+}
+
+#welcome3, #welcome32, #welcome322{
+    width: 16.6666667%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    float:left;
+    overflow: hidden;
+    position: relative; 
+}
+#welcome3 p, #welcome32 p, #welcome322 p{
+    
+    margin-top:50px;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: float 5s linear infinite;
+}
+
+#welcome32 > img, #welcome322 > img{
+    width:40%;
+    height: 350px;
+    background-color: white;
+    /* position: absolute;
+    left:5%; */
+    float: left;
+    margin-top: 100px;
+    margin-left: 105px;
+    /* animation: float 5s linear infinite; */
+}
+
+#welcome322 > img{
+    height:350px;
+    margin-top: 80px;
+}
+
+.study{
+    width:70%;
+    position: absolute;
+    left:15%
+    
+}
+#welcome4{
+    width: 16.6666667%;
+    height: 100vh;
+    display: block;
+    float:left;
+    overflow: hidden;
+    background-image: url("../images/stone.jpg")
+    
+    
+}
+
+#welcome4 p{
+    margin-top:250px;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: float 5s linear infinite;
+}
+
+#welcome4text{
+    position: relative;
+    left:50%;
+    top: 10%;
+    margin-left: -100px;
+    border: 5px solid white;
+    width: 180px;
+    text-align: center;
+    
+    color:white;
+    
+    animation: float 5s linear infinite;
+}
+
+a.start, a.start:visited, a.start:link, a.start:active{
+    
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:white;    
+}
+
+a.start:hover{
+    color:green;
+}
+
+
+
+#welcome4text:hover{
+    border: 5px solid darkgreen;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+@keyframes float {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+/* column */
+/* #column{
+    display: none;
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(42, 180, 42);
+}
+
+#column > ul{
+    padding-top:10%;
+    list-style-type: none;
+    
+}
+.top{
+    border-bottom: 2px solid darkgreen;
+
+}
+
+#column > ul li{
+    
+    width:100%;
+    font-size: 20px;
+    color: white;
+    
+    font-family:sans-serif;
+    padding: 20px 0px;
+    border-bottom: 2px solid darkgreen;
+        
+
+}
+#column > ul li:hover{
+    background-color: green;
+
+} */
+
+#main{
+	width:100%;
+	height:80px;
+	background-color: black;
+	top:0px;
+	z-index:100;
+	overflow: hidden;
+	display: none;
+}
+
+#main>img{
+	float:left;
+	margin-left: 20px;
+	height: 80px;
+}	
+nav {
+width: 100%;
+height: 80px;
+background-color: #000;
+line-height:80px;
+
+}
+
+nav ul{
+float: left;
+margin-left:30px;
+}
+
+nav ul li{
+list-style-type:none;
+display: inline-block;
+transition: 0.8s all;
+
+}
+
+nav ul li:hover{
+background-color:#33641f;
+
+}
+
+nav ul li a{
+text-decoration:none;
+color:#fff;
+padding:30px;
+}
+
+/* content */
+
+#content{
+    display: none;
+    float: right;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    background-color: aquamarine;
+}
+
+#content > h1, #content > p{
+    width: 400px;
+    clear: both;
+    margin-left:30%;
+    text-align: center;
+    color: white;
+    font-family:sans-serif;
+    font-weight: bold;
+    /* border: 1px solid white; */
+    font-size: 50px
+}
+
+#content > h1{
+    font-size: 80px;
+
+}
+
+.row > img{
+    width: 400px;
+	height: 225px;
+    float: left;
+    margin-top: 100px;
+	margin-left:30%;
+	
+    
+    transition: all .5s ease;
+    animation: float 4s linear infinite;
+}
+
+.row > img:hover{
+    transform:scale(1.1);
+    
+}
+
+
+
+.row > p{
+    color:white;
+    text-align: center;
+}

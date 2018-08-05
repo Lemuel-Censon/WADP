@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Sign Up </title>
+
+
+    <link href="../../css/signup.css" rel="stylesheet">
+
+
+    <link rel="icon" href="../../images/logo.png">
+
+    <script src="../../data/userdata.js"></script>
+    <script src="../../js/signup2.js"></script>
+
+    <!-- Bootstrap-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="nav">
+        <a href="index.html">
+            <img src="../../images/logo.png">
+        </a>
+
+    </div>
+
+
+    <div id="signup" class="container">
+        <p>Sign Up</p>
+        <p class="signupinv">Please fill in the form</p>
+        
+        <form method="post" onsubmit="signup()" action="javascript:void(0)"> <!-- Apparently "javascript:void(0)" prevents the page from refreshing-->
+
+            <div class="form-group">
+                <label for="username"> Username:</label>
+                <input type="text" name="name" id="username" placeholder="Username" required autofocus onkeydown="checkEnter(event)">
+            </div>
+
+            <div class="form-group">
+                <label for="password"> Password: </label>
+                <input type="password" name="pw" id="password" placeholder="Password" required onkeydown="checkEnter(event)">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword"> Confirm Password: </label>
+                <input type="password" name="pw" id="confirmPassword" placeholder="Confirm Password" required onkeydown="checkEnter(event)">
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+                <label for="email"> Email Address: </label>
+                <input type="email" name="email" id="email" placeholder="Email" required onkeydown="checkEnter(event)">
+            </div>
+
+            <input type="submit" value="Sign Up" class="right">
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
